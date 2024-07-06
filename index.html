@@ -381,7 +381,8 @@
             <hr class="w-full md:hidden opacity-20">
             <div class="md:w-1/2 lg:w-1/2 md:ml-10 p-8 rounded-lg">
                 <h2 class="text-4xl text-center mb-10 text-darkbgText">Message Form</h2>
-                <form>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="af4a2585-2bcc-4dbf-a4e0-7207540fcbc9">
                     <div class="mb-6">
                         <label for="name" class="block text-gray-400 text-sm font-bold mb-2">Name:</label>
                         <input type="text" id="name" name="name"
