@@ -12,7 +12,7 @@ window.addEventListener("scroll", () => {
         navbar.classList.add("bg-transparent");
         navbar.classList.remove("bg-gray-800", "shadow-md");
     } else {
-        navbar.classList.add("bg-gray-800", "shadow-md");
+        navbar.classList.add("", "");
         navbar.classList.remove("bg-transparent");
     }
 });
