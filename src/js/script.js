@@ -10,7 +10,9 @@ window.addEventListener("scroll", () => {
     const navbar = document.getElementById("navbar");
     if (window.scrollY > 50) {
         navbar.classList.add("bg-transparent");
+        navbar.classList.remove("bg-darkbgText");
     } else {
         navbar.classList.remove("bg-transparent");
+        navbar.classList.add("bg-darkbgText");
     }
 });
