@@ -22,6 +22,25 @@
         .bg-darkbgText {
             background-color: #1A202C;
         }
+
+        .underline-effect::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #00BFFF;
+            /* Sky color for the underline */
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.5s ease-in-out;
+        }
+
+        .underline-effect:hover::before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
     </style>
 </head>
 
@@ -35,11 +54,11 @@
                 <span class="text-2xl font-bold"><span class="text-title">Inv</span>east</span>
             </div>
             <div class="hidden md:flex space-x-4">
-                <a href="#hero" class="hover:text-sky-400">Home</a>
-                <a href="#about" class="hover:text-sky-400">About Us</a>
-                <a href="#teams" class="hover:text-sky-400">Teams</a>
-                <a href="#services" class="hover:text-sky-400">Services</a>
-                <a href="#contact" class="hover:text-sky-400">Contact Us</a>
+                <a href="#hero" class="relative underline-effect">Home</a>
+                <a href="#about" class="relative underline-effect">About Us</a>
+                <a href="#teams" class="relative underline-effect">Teams</a>
+                <a href="#services" class="relative underline-effect">Services</a>
+                <a href="#contact" class="relative underline-effect">Contact Us</a>
             </div>
             <div class="md:hidden flex items-center">
                 <button class="mobile-menu-button">
@@ -51,18 +70,18 @@
                 </button>
             </div>
         </div>
-        <div class="mobile-menu hidden md:hidden">
-            <a href="#hero" class="block px-4 py-2 text-sm hover:bg-gray-700">Home</a>
-            <a href="#about" class="block px-4 py-2 text-sm hover:bg-gray-700">About Us</a>
-            <a href="#teams" class="block px-4 py-2 text-sm hover:bg-gray-700">Teams</a>
-            <a href="#services" class="block px-4 py-2 text-sm hover:bg-gray-700">Services</a>
-            <a href="#contact" class="block px-4 py-2 text-sm hover:bg-gray-700">Contact Us</a>
+        <div class="mobile-menu hidden md:hidden pt-2">
+            <a href="#hero" class="block px-4 py-2 text-sm relative underline-effect">Home</a>
+            <a href="#about" class="block px-4 py-2 text-sm relative underline-effect">About Us</a>
+            <a href="#teams" class="block px-4 py-2 text-sm relative underline-effect">Teams</a>
+            <a href="#services" class="block px-4 py-2 text-sm relative underline-effect">Services</a>
+            <a href="#contact" class="block px-4 py-2 text-sm relative underline-effect">Contact Us</a>
         </div>
     </nav>
 
+
     <!-- Home/Hero Section -->
-    <section id="hero"
-        class="relative bg-[url(https://images.unsplash.com/photo-1604014237800-1c9102c219da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80)] bg-cover bg-center bg-no-repeat">
+    <section id="hero" class="relative bg-cover bg-center bg-no-repeat bg-images">
         <div
             class="absolute inset-0 bg-gray-900/75 sm:bg-transparent sm:from-gray-900/95 sm:to-gray-900/25 sm:bg-gradient-to-r xs:bg-gradient-to-l">
         </div>
@@ -82,12 +101,12 @@
 
                 <div class="mt-8 flex flex-wrap gap-4 text-center">
                     <a href="#contact"
-                        class="block w-full rounded bg-sky-600 px-12 py-3 text-sm font-medium text-darkbgText shadow hover:bg-sky-700 active:bg-sky-500 sm:w-auto">
+                        class="block w-full rounded bg-sky-600 px-12 py-3 text-sm font-medium text-darkbgText shadow  active:bg-sky-500 sm:w-auto transition-transform duration-300 transform hover:scale-105">
                         Contact Us
                     </a>
 
                     <a href="#service"
-                        class="block w-full rounded bg-darkbgText px-12 py-3 text-sm font-medium text-sky-600 shadow hover:text-sky-700  active:text-sky-500 sm:w-auto">
+                        class="block w-full rounded bg-gray-200 px-12 py-3 text-sm font-medium text-sky-600 shadow  active:text-sky-500 sm:w-auto transition-transform duration-300 transform hover:scale-105">
                         Services
                     </a>
                 </div>
@@ -100,18 +119,18 @@
         class=" mx-auto max-w-screen-xl px-4 py-20 md:py-36 sm:px-6 lg:flex lg:h-screen lg:items-center lg:py-0 lg:px-8">
         <div class="flex flex-col md:flex-row gap-10">
             <div class="flex flex-col justify-center md:w-1/2 ">
-                <h3 class="text-3xl font-bold text-title mb-10">about us</h3>
-                <h1 class="text-5xl lg:text-6xl mb-1">Esco Anak Kontol</h1>
-                <p class="text-gray-600 text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae
-                    dignissimos,
-                    atque esse quaerat
-                    incidunt voluptas nobis amet est temporibus quas saepe, enim, rerum dolorem tempore accusantium
-                    praesentium provident voluptate voluptates.</p>
+                <h3 class="text-3xl font-bold text-title mb-10">About Us</h3>
+                <h1 class="text-5xl lg:text-6xl mb-1">Bring Globalization to the East</h1>
+                <p class="text-gray-600 text-justify">Welcome to Inveast. We are committed to excellence in everything
+                    we do. Our team works tirelessly to provide top-notch services and products, ensuring customer
+                    satisfaction and continuous improvement. Join us on our journey to make a lasting impact in the
+                    industry.</p>
+
 
                 <div class="my-10">
-                    <h1 class="text-5xl lg:text-6xl mb-1">Connect with us</h1>
-                    <p class="text-gray-600 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                        corrupti tempore eveniet autem vel magnam.</p>
+                    <h1 class="text-5xl lg:text-6xl mb-1">Connect with Us</h1>
+                    <p class="text-gray-600 text-justify">Stay updated by following us on our social media channels.</p>
+
 
                     <div class="flex items-center mt-4 lg:mt-6">
                         <a href="https://www.instagram.com/" target="_blank"
@@ -187,7 +206,7 @@
                     <div
                         class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300">
                         <img class="transition-transform duration-700 ease-in-out transform group-hover:scale-110 object-cover w-full h-full"
-                            src="https://images.unsplash.com/photo-1562788869-4ed32648eb72?" alt="Card Image">
+                            src="./src/Images/Team_Profile/JB.jpg" alt="Card Image">
                         <div
                             class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0  transition-all duration-1000">
                             <h2 class="text-darkbgText lg:text-2xl text-xl font-bold ">John Doe</h2>
@@ -221,20 +240,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="group relative w-full md:w-1/3 lg:w-1/4 p-4">
-                    <div
-                        class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300">
-                        <img class="object-cover w-full h-full" src="src/Images/pasfoto.png" alt="Card Image">
-                        <div
-                            class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
-                            <h2 class="text-darkbgText lg:text-2xl text-xl font-bold ">Martin Lay</h2>
-                            <p class="text-gray-300 lg:text-lg mb-5">Developer</p>
-                            <p class="text-gray-300 lg:text-lg text-justify">Experienced with expertise in programming
-                                languages ​​such as HTML, CSS, JavaScript, and PHP. Extensive experience in developing
-                                everything from personal portfolios to e-commerce platforms..</p>
-                        </div>
-                    </div>
-                </div>
+
                 <div class="group relative w-full md:w-1/3 lg:w-1/4 p-4">
                     <div
                         class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300">
@@ -255,21 +261,37 @@
             <!-- Team 2 Section -->
             <div class="flex flex-col items-center justify-center w-full mt-10 px-4">
                 <h3 class="text-3xl text-darkbgText mb-2">Developer</h3>
-                <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, consequatur.</p>
+                <p class="text-gray-400">Our developer team is proficient in HTML, CSS, PHP, JavaScript, and frameworks
+                    like React.js, Vue.js, and Nuxt.js, delivering innovative and high-quality web solutions.</p>
             </div>
             <div class="flex flex-col md:flex-row items-center justify-center w-full mt-10">
                 <div class="group relative w-full md:w-1/3 lg:w-1/4 p-4">
                     <div
                         class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300">
-                        <img class="object-cover w-full h-full"
-                            src="https://images.unsplash.com/photo-1497316730643-415fac54a2af?" alt="Card Image">
+                        <img class="object-cover w-full h-full" src="./src/Images/Team_Profile/LF.JPG" alt="Card Image">
                         <div
                             class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
-                            <h2 class="text-darkbgText lg:text-2xl text-xl font-bold ">Anna Taylor</h2>
-                            <p class="text-gray-300 lg:text-lg mb-5">Marketing</p>
-                            <p class="text-gray-300 lg:text-lg text-justify">Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit. Expedita repellat iusto quia enim ea quidem eos fugit voluptatum quam
-                                unde!.</p>
+                            <h2 class="text-darkbgText lg:text-2xl text-xl font-bold ">Luis Ferdinand</h2>
+                            <p class="text-gray-300 lg:text-lg mb-5">Frontend Developer</p>
+                            <p class="text-gray-300 lg:text-lg text-justify">I am a freelance web developer skilled in
+                                HTML, CSS, PHP, JavaScript, and frameworks like React.js, Vue.js, and Nuxt.js, with
+                                experience in graphic design and machine learning.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative w-full md:w-1/3 lg:w-1/4 p-4">
+                    <div
+                        class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300">
+                        <img class="object-cover w-full h-full" src="src/Images/Team_Profile/Martin.png"
+                            alt="Card Image">
+                        <div
+                            class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
+                            <h2 class="text-darkbgText lg:text-2xl text-xl font-bold ">Martin Lay</h2>
+                            <p class="text-gray-300 lg:text-lg mb-5">Developer</p>
+                            <p class="text-gray-300 lg:text-lg text-justify">Experienced with expertise in programming
+                                languages ​​such as HTML, CSS, JavaScript, and PHP. Extensive experience in developing
+                                everything from personal portfolios to e-commerce platforms..</p>
                         </div>
                     </div>
                 </div>
@@ -345,8 +367,7 @@
     </section>
 
     <!-- Contact Us Section -->
-    <section id="contact"
-        class="relative bg-[url(https://images.unsplash.com/photo-1604014237800-1c9102c219da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80)] bg-cover bg-center bg-no-repeat">
+    <section id="contact" class="relative bg-contact bg-cover bg-center bg-no-repeat">
         <div
             class="absolute inset-0 bg-gray-900/75 sm:bg-transparent sm:from-gray-900/95 sm:to-gray-900/25 sm:bg-gradient-to-r xs:bg-gradient-to-l">
         </div>

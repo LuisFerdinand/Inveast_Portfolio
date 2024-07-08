@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-images {
+    background-image: url('./Images/back.png');
+}
+
+.bg-contact {
+    background-image: url('./Images/Background.png');
+}
