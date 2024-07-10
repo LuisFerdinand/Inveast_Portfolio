@@ -44,9 +44,42 @@
     </style>
 </head>
 <body>
-    <div id="header-placeholder"></div>
+<!--     <div id="header-placeholder"></div>
   
-    <div id="breadcrumb-placeholder"></div>
+    <div id="breadcrumb-placeholder"></div> -->
+    <!-- Navbar Section -->
+    <nav id="navbar" class="text-white px-4 py-2 fixed w-full z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="src/Images/logo.png" alt="inveast-logo" class="w-10 h-10 mr-3">
+                <span class="text-2xl font-bold"><span class="text-title">Inv</span>east</span>
+            </div>
+            <div class="hidden md:flex space-x-4 " style=" color: black; ">
+                <a href="index.html" class="relative py-2 underline-effect">Home</a>
+                <a href="about.html" class="relative py-2 underline-effect">About Us</a>
+                <a href="teams.html" class="relative py-2 underline-effect">Teams</a>
+                <a href="services.html" class="relative py-2 underline-effect">Services</a>
+                <a href="contact.html" class="rounded-3xl bg-sky-600 px-6 py-2 hover:bg-title">Contact Us</a>
+            </div>
+            <div class="md:hidden flex items-center">
+                <button class="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu hidden md:hidden pt-2">
+            <a href="index.html" class="block px-4 py-2 text-sm relative underline-effect">Home</a>
+            <a href="about.html" class="block px-4 py-2 text-sm relative underline-effect">About Us</a>
+            <a href="team.html" class="block px-4 py-2 text-sm relative underline-effect">Teams</a>
+            <a href="service.html" class="block px-4 py-2 text-sm relative underline-effect">Services</a>
+            <a href="contact.html" class="block px-4 py-2 text-sm relative underline-effect">Contact Us</a>
+        </div>
+    </nav>
+
    <!-- About us Section-->
    <main style=" background-color: cornsilk; ">
     <section id="about"
