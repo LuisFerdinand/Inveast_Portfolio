@@ -13,6 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css">
     <title>INVEAST</title>
     <style>
         .bg-transparent {
@@ -47,7 +48,7 @@
 <body class="font-sans bg-bg">
 
     <!-- Navbar Section -->
-    <nav id="navbar" class="text-white px-4 py-2 fixed w-full z-10">
+    <nav id="navbar" class="bg-darkbgText text-white px-4 py-2 fixed w-full z-10">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center">
                 <img src="src/Images/logo.png" alt="inveast-logo" class="w-10 h-10 mr-3">
@@ -56,19 +57,28 @@
             <div class="hidden md:flex space-x-4 ">
                 <a href="#hero" class="relative py-2 underline-effect">Home</a>
                 <a href="#about" class="relative py-2 underline-effect">About Us</a>
-                <a href="#teams" class="relative py-2 underline-effect">Teams</a>
-                <a href="#services" class="relative py-2 underline-effect">Services</a>
+                <a href="#team" class="relative py-2 underline-effect">Teams</a>
+                <a href="#service" class="relative py-2 underline-effect">Services</a>
                 <a href="#contact" class="rounded-3xl bg-sky-600 px-6 py-2 hover:bg-title">Contact Us</a>
             </div>
             <div class="md:hidden flex items-center">
-                <button class="mobile-menu-button">
+                <button id="hamburger" class="transition">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
+                <button id="closeBtn" class="hidden">
+                    <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                        viewBox="0 0 72 72" stroke="currentColor" fill="currentColor">
+                        <path
+                            d="M 19 15 C 17.977 15 16.951875 15.390875 16.171875 16.171875 C 14.609875 17.733875 14.609875 20.266125 16.171875 21.828125 L 30.34375 36 L 16.171875 50.171875 C 14.609875 51.733875 14.609875 54.266125 16.171875 55.828125 C 16.951875 56.608125 17.977 57 19 57 C 20.023 57 21.048125 56.609125 21.828125 55.828125 L 36 41.65625 L 50.171875 55.828125 C 51.731875 57.390125 54.267125 57.390125 55.828125 55.828125 C 57.391125 54.265125 57.391125 51.734875 55.828125 50.171875 L 41.65625 36 L 55.828125 21.828125 C 57.390125 20.266125 57.390125 17.733875 55.828125 16.171875 C 54.268125 14.610875 51.731875 14.609875 50.171875 16.171875 L 36 30.34375 L 21.828125 16.171875 C 21.048125 15.391875 20.023 15 19 15 z">
+                        </path>
+                    </svg>
+                </button>
             </div>
+
         </div>
         <div class="mobile-menu hidden md:hidden pt-2">
             <a href="#hero" class="block px-4 py-2 text-sm relative underline-effect">Home</a>
@@ -86,7 +96,8 @@
             class="absolute inset-0 bg-gray-900/75 sm:bg-transparent sm:from-gray-900/95 sm:bg-gradient-to-r xs:bg-gradient-to-l">
         </div>
 
-        <div class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center ">
+        <div class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center"
+            data-aos="fade-right" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-offset="-100">
             <div class="max-w-xl text-center sm:text-left">
                 <h1 class="text-5xl font-bold text-darkbgText lg:text-6xl">
                     Innovation for the East
@@ -95,9 +106,7 @@
                 </h1>
 
                 <p class="mt-4 max-w-lg text-gray-400">
-                    Driving progress and transforming lives, Inveast is at the forefront of innovation in the East. Our
-                    solutions are designed to meet the unique challenges of the region, empowering communities and
-                    fostering sustainable growth. Join us on our mission to create a brighter, more prosperous future.
+                    Driving progress and transforming lives, Inveast is at the forefront of innovation in the East.
                 </p>
 
                 <div class="mt-8 flex flex-wrap gap-4 text-center">
@@ -119,7 +128,8 @@
     <section id="about"
         class=" mx-auto max-w-screen-xl px-4 py-20 md:py-36 sm:px-6 lg:flex lg:h-screen lg:items-center lg:py-0 lg:px-8">
         <div class="flex flex-col md:flex-row gap-10">
-            <div class="flex flex-col justify-center md:w-1/2 ">
+            <div class="flex flex-col justify-center md:w-1/2" data-aos="fade-right" data-aos-duration="1500"
+                data-aos-easing="ease-in-out">
                 <h3 class="text-3xl font-bold text-title mb-10">About Us</h3>
                 <h1 class="text-4xl lg:text-5xl mb-2">East Global Innovation</h1>
                 <p class="text-gray-600 text-justify">Welcome to Inveast. We are dedicated to excellence in all our
@@ -149,7 +159,7 @@
 
 
                     <div class="flex items-center mt-4 lg:mt-6">
-                        <a href="https://www.instagram.com/" target="_blank"
+                        <a href="https://www.instagram.com/inveaststart/?next=%2F" target="_blank"
                             class="text-slate-500 w-9 h-9 rounded-full mr-3 border border-slate-500 flex items-center justify-center hover:bg-title hover:text-white hover:border-none">
                             <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -158,7 +168,7 @@
                                     d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" />
                             </svg>
                         </a>
-                        <a href="https://www.instagram.com/" target="_blank"
+                        <a href="https://www.tiktok.com/@inveastgroup" target="_blank"
                             class="text-slate-500 w-9 h-9 rounded-full mr-3 border border-slate-500 flex items-center justify-center hover:bg-title hover:text-white hover:border-none">
                             <svg role="img" viewBox="0 0 24 24" width="20" class="fill-current"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -176,7 +186,7 @@
                                     d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" />
                             </svg>
                         </a>
-                        <a href="https://www.instagram.com/" target="_blank"
+                        <a href="https://www.linkedin.com/in/inveast-group-8342bb31a/" target="_blank"
                             class="text-slate-500 w-9 h-9 rounded-full mr-3 border border-slate-500 flex items-center justify-center hover:bg-title hover:text-white hover:border-none">
                             <svg role="img" viewBox="0 0 24 24" width="20" class="fill-current"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -188,7 +198,8 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col items-center justify-center md:w-1/2 sm:mt-10 xs:mt-10">
+            <div class="flex flex-col items-center justify-center md:w-1/2 sm:mt-10 xs:mt-10" data-aos="zoom-in"
+                data-aos-duration="1500">
                 <img src="src/Images/2.png" alt="" class="w-[400px] h-[400px] object-cover rounded-3xl">
                 <div class="grid grid-cols-2 mt-5 px-4 gap-3">
                     <div
@@ -211,24 +222,31 @@
         <div class="max-w-screen-xl">
             <div class="text-center mb-10">
                 <h3 class="text-3xl font-bold text-title mb-10">Teams</h3>
-                <h2 class="text-4xl text-darkbgText mb-2">Get to know our teams</h2>
-                <p class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, consequatur.</p>
+                <h2 class="text-4xl text-darkbgText mb-2">Meet Our CEO</h2>
+                <p class="text-gray-400">Our CEO, <strong class="text-gray-300">Joao Bosco Soares Pinto</strong>, is a
+                    visionary leader with a
+                    wealth of
+                    experience in the
+                    industry. With a passion for innovation and a commitment to excellence, [CEO's Name] drives our
+                    company forward, ensuring we achieve our goals and maintain our status as industry leaders. Under
+                    [CEO's Name]'s leadership, we continue to grow and thrive, always pushing the boundaries of what is
+                    possible.</p>
             </div>
 
             <!-- CEO Section -->
-            <div class="flex flex-col items-center justify-center w-full">
+            <div class="flex flex-col items-center justify-center w-full" data-aos="fade-up" data-aos-duration="1000">
                 <div class="group relative w-full md:w-1/2 lg:w-1/3 p-4">
-                    <div
-                        class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300">
+                    <div class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300"
+                        data-aos="fade-up" data-aos-duration="1000">
                         <img class="transition-transform duration-700 ease-in-out transform group-hover:scale-110 object-cover w-full h-full"
                             src="./src/Images/teams/Bosco.png" alt="Card Image">
                         <div
                             class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0  transition-all duration-1000">
                             <h2 class="text-darkbgText lg:text-2xl text-xl font-bold ">Joao Bosco Soares Pinto</h2>
                             <p class="text-gray-300 lg:text-lg mb-5">CEO</p>
-                            <p class="text-gray-300 lg:text-lg text-justify">Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit. Expedita repellat iusto quia enim ea quidem eos fugit voluptatum quam
-                                unde!.</p>
+                            <p class="text-gray-300 lg:text-lg text-justify">Computer Science graduate from Mercu Buana
+                                University, 2024. Master Trainer for Career Management & Competency, Student Ambassador
+                                in campus marketing, and Youth Parliament Timor Leste alumni.</p>
                         </div>
                     </div>
                 </div>
@@ -243,38 +261,55 @@
             </div>
             <div class="flex flex-col md:flex-row items-center justify-center w-full mt-10">
                 <div class="group relative w-full md:w-1/3 lg:w-1/4 p-4">
-                    <div
-                        class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300">
+                    <div class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300"
+                        data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                         <img class="object-cover w-full h-full" src="./src/Images/teams/Esco.JPG" alt="Card Image">
                         <div
                             class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
                             <h2 class="text-darkbgText lg:text-2xl text-xl font-bold ">Escolastico Guevara Yudha
                                 Sarmento
                             </h2>
-                            <p class="text-gray-300 lg:text-lg mb-5">Developer</p>
-                            <p class="text-gray-300 lg:text-lg text-justify">Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit. Expedita repellat iusto quia enim ea quidem eos fugit voluptatum quam
-                                unde!.</p>
+                            <p class="text-gray-300 lg:text-lg mb-5">Marketing</p>
+                            <p class="text-gray-300 lg:text-lg text-justify">Engaged in campus life, I won the AFLES
+                                Business Pitching Competition 2022 and recruit international students for an Indonesian
+                                university, driven by a passion for growth and learning.</p>
                         </div>
                     </div>
                 </div>
                 <div class="group relative w-full md:w-1/3 lg:w-1/4 p-4">
-                    <div
-                        class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300">
+                    <div class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300"
+                        data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <img class="object-cover w-full h-full" src="./src/Images/teams/ikhsan.jpg" alt="Card Image">
+                        <div
+                            class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
+                            <h2 class="text-darkbgText lg:text-2xl text-xl font-bold ">Muhammad Ikhsan</h2>
+                            <p class="text-gray-300 lg:text-lg mb-5">Marketing</p>
+                            <p class="text-gray-300 lg:text-lg text-justify">Electrical Engineering graduate with
+                                diverse experience in PLN, Lingkar Pengajian Beijing, UMB HR, and International Office.
+                                Skilled in creativity, collaboration, and management. Enthusiastic, detail-oriented, and
+                                ready for challenges.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative w-full md:w-1/3 lg:w-1/4 p-4">
+                    <div class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300"
+                        data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                         <img class="object-cover w-full h-full" src="src/Images/teams/Valen.JPG" alt="Card Image">
                         <div
                             class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
-                            <h2 class="text-darkbgText lg:text-2xl text-xl font-bold ">Valentino Wiyoto</h2>
-                            <p class="text-gray-300 lg:text-lg mb-5">Developer</p>
-                            <p class="text-gray-300 lg:text-lg text-justify">Experienced with expertise in programming
-                                languages ​​such as HTML, CSS, JavaScript, and PHP. Extensive experience in developing
-                                everything from personal portfolios to e-commerce platforms..</p>
+                            <h2 class="text-darkbgText lg:text-2xl text-xl font-bold ">Valentino  Wiyoto</h2>
+                            <p class="text-gray-300 lg:text-lg mb-5">Finance</p>
+                            <p class="text-gray-300 lg:text-lg text-justify">Management graduate from Mercu Buana
+                                University with HR specialization and Ethical Hacker certification. Skilled in talent
+                                acquisition, employee development, performance optimization, and cybersecurity
+                                implications for HR.</p>
                         </div>
                     </div>
                 </div>
+
                 <div class="group relative w-full md:w-1/3 lg:w-1/4 p-4">
-                    <div
-                        class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300">
+                    <div class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300"
+                        data-aos="fade-up" data-aos-duration="1000">
                         <img class="object-cover w-full h-full" src="./src/Images/teams/Ziah.png" alt="Card Image">
                         <div
                             class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
@@ -297,8 +332,8 @@
             </div>
             <div class="flex flex-col md:flex-row items-center justify-center w-full mt-10">
                 <div class="group relative w-full md:w-1/3 lg:w-1/4 p-4">
-                    <div
-                        class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300">
+                    <div class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300"
+                        data-aos="fade-up" data-aos-duration="1000" data-aos-delay="">
                         <img class="object-cover w-full h-full" src="./src/Images/teams/LF.JPG" alt="Card Image">
                         <div
                             class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
@@ -312,8 +347,8 @@
                     </div>
                 </div>
                 <div class="group relative w-full md:w-1/3 lg:w-1/4 p-4">
-                    <div
-                        class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300">
+                    <div class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300"
+                        data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                         <img class="object-cover w-full h-full" src="src/Images/teams/Martin.png" alt="Card Image">
                         <div
                             class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
@@ -326,44 +361,48 @@
                     </div>
                 </div>
                 <div class="group relative w-full md:w-1/3 lg:w-1/4 p-4">
-                    <div
-                        class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300">
-                        <img class="object-cover w-full h-full" src="src/Images/teams/David.png" alt="Card Image">
-                        <div
-                            class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
-                            <h2 class="text-darkbgText lg:text-2xl text-xl font-bold ">David</h2>
-                            <p class="text-gray-300 lg:text-lg mb-5">Frontend Developer</p>
-                            <p class="text-gray-300 lg:text-lg text-justify">Experienced with expertise in programming
-                                languages ​​such as HTML, CSS, JavaScript, and PHP. Extensive experience in developing
-                                everything from personal portfolios to e-commerce platforms..</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="group relative w-full md:w-1/3 lg:w-1/4 p-4">
-                    <div
-                        class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300">
+                    <div class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300"
+                        data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                         <img class="object-cover w-full h-full" src="./src/Images/teams/Nikky.jpg" alt="Card Image">
                         <div
                             class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
                             <h2 class="text-darkbgText lg:text-2xl text-xl font-bold ">Nikky</h2>
-                            <p class="text-gray-300 lg:text-lg mb-5">Backend Developer</p>
-                            <p class="text-gray-300 lg:text-lg text-justify">Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit. Expedita repellat iusto quia enim ea quidem eos fugit voluptatum quam
-                                unde!.</p>
+                            <p class="text-gray-300 lg:text-lg mb-5">Backend Designer</p>
+                            <p class="text-gray-300 lg:text-lg text-justify">as a computer science student, I have
+                                interest in about programming languages to build something, especially building website,
+                                or maybe creating project. Expertise in HTML, CSS, JavaScript, Python, SQL, and Git.
+                                Also have experience with some of the frameworks such as Laravel, NuxtJs, Vue.Js, and
+                                React.Js</p>
                         </div>
                     </div>
                 </div>
                 <div class="group relative w-full md:w-1/3 lg:w-1/4 p-4">
-                    <div
-                        class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300">
+                    <div class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300"
+                        data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                        <img class="object-cover w-full h-full" src="src/Images/teams/David.png" alt="Card Image">
+                        <div
+                            class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
+                            <h2 class="text-darkbgText lg:text-2xl text-xl font-bold ">David</h2>
+                            <p class="text-gray-300 lg:text-lg mb-5">UI/UX Developer</p>
+                            <p class="text-gray-300 lg:text-lg text-justify">I'm Enthusiastic and detail-oriented in
+                                Data Analyst and Web Developer with a knack for turning complex data into actionable
+                                insights and crafting seamless web experiences. Proficient in Python, SQL, and
+                                JavaScript, I excel in data visualization, predictive modeling, and building dynamic
+                                websites.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative w-full md:w-1/3 lg:w-1/4 p-4">
+                    <div class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300"
+                        data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                         <img class="object-cover w-full h-full" src="./src/Images/teams/Ravel.jpg" alt="Card Image">
                         <div
                             class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
                             <h2 class="text-darkbgText lg:text-2xl text-xl font-bold ">Ravel</h2>
-                            <p class="text-gray-300 lg:text-lg mb-5">Backend Developer</p>
-                            <p class="text-gray-300 lg:text-lg text-justify">Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit. Expedita repellat iusto quia enim ea quidem eos fugit voluptatum quam
-                                unde!.</p>
+                            <p class="text-gray-300 lg:text-lg mb-5">UI/UX Designer</p>
+                            <p class="text-gray-300 lg:text-lg text-justify"></p>
                         </div>
                     </div>
                 </div>
@@ -383,21 +422,21 @@
                 cutting-edge Android applications to stunning UI/UX designs and robust website development, we provide
                 solutions that drive success.</p>
             <div class="flex flex-col md:gap-10 md:flex-row py-10 items-center px-4 justify-center">
-                <div class="flex flex-col">
+                <div class="flex flex-col" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
                     <a href="#"
                         class="max-w-[250px] mx-4 py-4 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-500">
                         <img src="src/services/App.svg" alt="">
                     </a>
                     <h4 class="text-2xl mb-10">Android Application</h4>
                 </div>
-                <div class="flex flex-col">
+                <div class="flex flex-col" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
                     <a href="#"
                         class="max-w-[250px] mx-4 py-4 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-500">
                         <img src="src/services/Web.svg" alt="">
                     </a>
                     <h4 class="text-2xl mb-10">UI/UX Design</h4>
                 </div>
-                <div class="flex flex-col">
+                <div class="flex flex-col" data-aos="slide-up" data-aos-duration="1000" data-aos-delay="300">
                     <a href="#"
                         class="max-w-[250px] mx-4 py-4 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-500">
                         <img src="src/services/WebDev.svg" alt="">
@@ -418,7 +457,8 @@
 
         <div
             class="relative mx-auto max-w-screen-xl px-4 sm:px-6 md:flex lg:h-screen lg:items-center py-20 md:py-36 lg:py-0">
-            <div class="md:w-1/2 lg:w-1/2 p-8 rounded-lg mb-10 md:mb-0">
+            <div class="md:w-1/2 lg:w-1/2 p-8 rounded-lg mb-10 md:mb-0" data-aos="fade-down" data-aos-duration="1000"
+                data-aos-once="true">
                 <div class="text-center mb-8">
                     <h3 class="text-3xl text-title font-bold mb-10">Contact Us</h3>
                     <h2 class="text-4xl text-darkbgText mb-2">Contact Us Through</h2>
@@ -444,7 +484,8 @@
                 </div>
             </div>
             <hr class="w-full md:hidden opacity-20">
-            <div class="md:w-1/2 lg:w-1/2 md:ml-10 p-8 rounded-lg">
+            <div class="md:w-1/2 lg:w-1/2 md:ml-10 p-8 rounded-lg" data-aos="fade-up" data-aos-duration="1000"
+                data-aos-once="true">
                 <h2 class="text-4xl text-center mb-10 text-darkbgText">Message Form</h2>
                 <form action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="af4a2585-2bcc-4dbf-a4e0-7207540fcbc9">
@@ -483,9 +524,11 @@
             <div class="flex flex-wrap justify-between items-center">
                 <div class="w-full md:w-1/3 mb-4 md:mb-0">
                     <h5 class="text-lg font-bold mb-2">About Us</h5>
-                    <p class="text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam efficitur,
-                        elit eget tincidunt sollicitudin, nulla diam dictum libero, ut mollis lacus velit vel leo.</p>
+                    <p class="text-gray-400">We are a team of passionate professionals dedicated to providing top-notch
+                        services and innovative solutions. Our mission is to deliver excellence in every project we
+                        undertake.</p>
                 </div>
+
                 <div class="w-full md:w-1/3 mb-4 md:mb-0">
                     <h5 class="text-lg font-bold mb-2">Quick Links</h5>
                     <ul class="space-y-2">
@@ -505,13 +548,16 @@
                         <a href="https://www.facebook.com/" target="_blank" class="text-gray-400 hover:text-sky-400">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="https://www.twitter.com/" target="_blank" class="text-gray-400 hover:text-sky-400">
-                            <i class="fab fa-twitter"></i>
+                        <a href="https://www.tiktok.com/@inveastgroup" target="_blank"
+                            class="text-gray-400 hover:text-sky-400">
+                            <i class="fa-brands fa-tiktok"></i>
                         </a>
-                        <a href="https://www.instagram.com/" target="_blank" class="text-gray-400 hover:text-sky-400">
+                        <a href="https://www.instagram.com/inveaststart/?next=%2F" target="_blank"
+                            class="text-gray-400 hover:text-sky-400">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://www.linkedin.com/" target="_blank" class="text-gray-400 hover:text-sky-400">
+                        <a href="https://www.linkedin.com/in/inveast-group-8342bb31a/" target="_blank"
+                            class="text-gray-400 hover:text-sky-400">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                     </div>
@@ -522,8 +568,13 @@
             </div>
         </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
     <script src="src/js/script.js"></script>
+    <script>
+        AOS.init({
+            easing: 'ease-in-out'
+        });
+    </script>
 
 
 
