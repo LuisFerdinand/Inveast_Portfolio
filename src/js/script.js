@@ -36,4 +36,24 @@ window.addEventListener("scroll", () => {
     }
 });
 
+// Get the button
+const backToTopButton = document.getElementById("backToTop");
+
+// Add event listener to the window to show/hide the button
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        backToTopButton.classList.remove("hidden");
+    } else {
+        backToTopButton.classList.add("hidden");
+    }
+});
+
+// Add event listener to the button to scroll to the top
+backToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
 
