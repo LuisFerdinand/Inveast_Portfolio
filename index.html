@@ -33,7 +33,6 @@
             bottom: 0;
             left: 0;
             background-color: #00BFFF;
-            /* Sky color for the underline */
             visibility: hidden;
             transform: scaleX(0);
             transition: all 0.5s ease-in-out;
@@ -42,17 +41,6 @@
         .underline-effect:hover::before {
             visibility: visible;
             transform: scaleX(1);
-        }
-
-        video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-            /* To place it behind the content */
         }
     </style>
 </head>
@@ -111,7 +99,7 @@
         </div>
 
         <!-- Video Background -->
-        <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
+        <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover -z-10">
             <source src="./src/Images/Video/6774845-uhd_3840_2160_30fps.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -421,8 +409,7 @@
                     data-aos-duration="1000">
                     <div
                         class="relative overflow-hidden shadow-xl h-72 md:h-80 lg:h-96 hover:scale-105 transition duration-300">
-                        <img class="object-cover w-full h-full" src="./src/Images/teams/_MG_2562.png"
-                            alt="Luis Ferdinand">
+                        <img class="object-cover w-full h-full" src="./src/Images/teams/LF.JPG" alt="Luis Ferdinand">
                         <div
                             class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
                             <p class="text-gray-300"><strong>Education: </strong>Undergraduate Degree in
