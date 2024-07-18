@@ -42,6 +42,17 @@
             visibility: visible;
             transform: scaleX(1);
         }
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            /* To place it behind the content */
+        }
     </style>
 </head>
 
@@ -93,12 +104,18 @@
 
 
     <!-- Home/Hero Section -->
-    <section id="hero" class="relative bg-cover bg-center bg-no-repeat bg-images">
+    <section id="hero" class="relative bg-cover bg-center bg-no-repeat">
         <div
             class="absolute inset-0 bg-gray-900/75 sm:bg-transparent sm:from-gray-900/95 sm:bg-gradient-to-r xs:bg-gradient-to-l">
         </div>
 
-        <div class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center"
+        <!-- Video Background -->
+        <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
+            <source src="./src/Images/Video/6774845-uhd_3840_2160_30fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 flex h-screen items-center"
             data-aos="fade-right" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-offset="-100">
             <div class="max-w-xl text-center sm:text-left">
                 <h1 class="text-5xl font-bold text-darkbgText lg:text-6xl">
@@ -125,6 +142,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- About us Section-->
     <section id="about"
@@ -229,211 +247,314 @@
                     visionary leader with a
                     wealth of
                     experience in the
-                    industry. With a passion for innovation and a commitment to excellence, [CEO's Name] drives our
+                    industry. With a passion for innovation and a commitment to excellence, Bosco drives our
                     company forward, ensuring we achieve our goals and maintain our status as industry leaders. Under
-                    [CEO's Name]'s leadership, we continue to grow and thrive, always pushing the boundaries of what is
+                    Bosco's leadership, we continue to grow and thrive, always pushing the boundaries of what is
                     possible.</p>
             </div>
 
             <!-- CEO Section -->
             <div class="flex flex-col items-center justify-center w-full" data-aos="fade-up" data-aos-duration="1000">
                 <div class="group relative w-full md:w-1/2 lg:w-1/3 p-4">
-                    <div class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300"
-                        data-aos="fade-up" data-aos-duration="1000">
+                    <div
+                        class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300">
                         <img class="transition-transform duration-700 ease-in-out transform group-hover:scale-110 object-cover w-full h-full"
                             src="./src/Images/teams/Bosco.png" alt="Card Image">
                         <div
-                            class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0  transition-all duration-1000">
-                            <h2 class="text-darkbgText lg:text-2xl text-xl font-bold ">Joao Bosco Soares Pinto</h2>
-                            <p class="text-gray-300 lg:text-lg mb-5">CEO</p>
-                            <p class="text-gray-300 lg:text-lg text-justify">Computer Science graduate from Mercu Buana
-                                University, 2024. Master Trainer for Career Management & Competency, Student Ambassador
-                                in campus marketing, and Youth Parliament Timor Leste alumni.</p>
+                            class="flex flex-col justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0  transition-all duration-1000">
+                            <p class="text-gray-300"><strong>Education: </strong>Computer Science Degree 2023</p>
+                            <div class="mt-3 text-gray-300">
+                                <p class=""><strong>Experience:</strong></p>
+                                <ul class="list-disc list-inside">
+                                    <li>Youth Parliament Alumni </li>
+                                    <li>CMC Master Trainer</li>
+                                </ul>
+                            </div>
                         </div>
+                    </div>
+                    <div class="text-center">
+                        <h2 class="text-darkbgText lg:text-2xl text-xl font-bold mt-3">Joao Bosco Soares Pinto</h2>
+                        <p class="text-gray-300 lg:text-lg">CEO</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Team 1 Section -->
+            <!-- Team Management Section -->
             <div class="flex flex-col items-center justify-center  w-full mt-10 px-4">
                 <h3 class="text-3xl text-darkbgText mb-2">Management</h3>
                 <p class="text-gray-400 text-center"> Meet our dedicated management team. Committed to excellence, they
                     lead with vision, integrity, and a passion for innovation, driving Inveast towards a brighter
                     future.</p>
             </div>
-            <div class="flex flex-col md:flex-row items-center justify-center w-full mt-10">
-                <div class="group relative w-full md:w-1/3 lg:w-1/4 p-4">
-                    <div class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300"
-                        data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                        <img class="object-cover w-full h-full" src="./src/Images/teams/Esco.JPG" alt="Card Image">
-                        <div
-                            class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
-                            <h2 class="text-darkbgText lg:text-2xl text-xl font-bold ">Escolastico Guevara Yudha
-                                Sarmento
-                            </h2>
-                            <p class="text-gray-300 lg:text-lg mb-5">Chief Marketing Officer</p>
-                            <p class="text-gray-300 lg:text-lg text-justify">Engaged in campus life, I won the AFLES
-                                Business Pitching Competition 2022 and recruit international students for an Indonesian
-                                university, driven by a passion for growth and learning.</p>
+            <div class="flex flex-col md:flex-row">
+                <!-- Marketing Team -->
+                <div class="flex flex-col md:flex-row">
+                    <div class="flex flex-col sm:flex-row items-center justify-center mt-8 w-full">
+                        <div class="group relative w-full sm:w-1/2 p-4" data-aos="fade-up" data-aos-duration="1000">
+                            <div
+                                class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300">
+                                <img class="object-cover w-full h-full" src="./src/Images/teams/Esco.JPG"
+                                    alt="Card Image">
+                                <div
+                                    class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
+                                    <p class="text-gray-300"><strong>Education: </strong>Undergraduate Degree in
+                                        Economic and Business
+
+                                    </p>
+                                    <div class="mt-3 text-gray-300">
+                                        <p class=""><strong>Experience:</strong></p>
+                                        <ul class="list-disc list-inside">
+                                            <li>Intl. Student Recruitment</li>
+                                            <li>Marketing Expertise</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <h2 class="text-darkbgText lg:text-xl text-lg font-bold mt-3">Chief Marketing Officer
+                                </h2>
+                                <p class="text-gray-400 text-sm lg:text-md">Escolastico Guevara</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="group relative w-full md:w-1/3 lg:w-1/4 p-4">
-                    <div class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300"
-                        data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                        <img class="object-cover w-full h-full" src="./src/Images/teams/ikhsan.jpg" alt="Card Image">
-                        <div
-                            class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
-                            <h2 class="text-darkbgText lg:text-2xl text-xl font-bold ">Muhammad Ikhsan</h2>
-                            <p class="text-gray-300 lg:text-lg mb-5">Marketing Manager/Humas</p>
-                            <p class="text-gray-300 lg:text-lg text-justify">Electrical Engineering graduate with
-                                diverse experience in PLN, Lingkar Pengajian Beijing, UMB HR, and International Office.
-                                Skilled in creativity, collaboration, and management. Enthusiastic, detail-oriented, and
-                                ready for challenges.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="group relative w-full md:w-1/3 lg:w-1/4 p-4">
-                    <div class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300"
-                        data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        <img class="object-cover w-full h-full" src="src/Images/teams/Valen.JPG" alt="Card Image">
-                        <div
-                            class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
-                            <h2 class="text-darkbgText lg:text-2xl text-xl font-bold ">Valentino  Wiyoto</h2>
-                            <p class="text-gray-300 lg:text-lg mb-5">Chief Financial Officer</p>
-                            <p class="text-gray-300 lg:text-lg text-justify">Management graduate from Mercu Buana
-                                University with HR specialization and Ethical Hacker certification. Skilled in talent
-                                acquisition, employee development, performance optimization, and cybersecurity
-                                implications for HR.</p>
+                        <div class="group relative w-full sm:w-1/2 p-4" data-aos="fade-up" data-aos-duration="1000"
+                            data-aos-delay="100">
+                            <div
+                                class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300">
+                                <img class="object-cover w-full h-full" src="./src/Images/teams/ikhsan.jpg"
+                                    alt="Card Image">
+                                <div
+                                    class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
+                                    <p class="text-gray-300"><strong>Education: </strong>Undergraduate Degree in
+                                        Economic and Business
+                                    </p>
+                                    <div class="mt-3 text-gray-300">
+                                        <p class=""><strong>Experience:</strong></p>
+                                        <ul class="list-disc list-inside">
+                                            <li>Intl. Student Recruitment</li>
+                                            <li>Financial Mgmt/Budgeting</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <h2 class="text-darkbgText lg:text-xl text-lg font-bold mt-3">Marketing Manager</h2>
+                                <p class="text-gray-400 text-sm lg:text-md">Muhammad Ikhsan</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="group relative w-full md:w-1/3 lg:w-1/4 p-4">
-                    <div class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300"
-                        data-aos="fade-up" data-aos-duration="1000">
-                        <img class="object-cover w-full h-full" src="./src/Images/teams/Ziah.png" alt="Card Image">
-                        <div
-                            class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
-                            <h2 class="text-darkbgText lg:text-2xl text-xl font-bold ">Fauziah Azahra</h2>
-<<<<<<< HEAD
-                            <p class="text-gray-300 lg:text-lg mb-5">Manager</p>
-                            <p class="text-gray-300 lg:text-lg text-justify">Psychology student specializing in
-                                clinical, industrial, and organizational fields. Skilled in empirical research, data
-                                analysis, psychological evaluation, and reporting. Empathetic communicator, aiming for a
-                                career in clinical or industrial practice.</p>
-=======
-                            <p class="text-gray-300 lg:text-lg mb-5">Secretaris</p>
-                            <p class="text-gray-300 lg:text-lg text-justify">Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit. Expedita repellat iusto quia enim ea quidem eos fugit voluptatum quam
-                                unde!.</p>
->>>>>>> b9066212f7332faa7c831a2d75390598867263a9
+                <!-- Finance Team -->
+                <div class="flex flex-col md:flex-row mt-8">
+                    <div class="flex flex-col sm:flex-row items-center justify-center w-full">
+                        <div class="group relative w-full sm:w-1/2 p-4" data-aos="fade-up" data-aos-duration="1000"
+                            data-aos-delay="200">
+                            <div
+                                class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300">
+                                <img class="object-cover w-full h-full" src="src/Images/teams/Valen.JPG"
+                                    alt="Card Image">
+                                <div
+                                    class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
+                                    <p class="text-gray-300"><strong>Education: </strong>Postgraduate Degree in
+                                        Electrical Engineering
+                                    </p>
+                                    <div class="mt-3 text-gray-300">
+                                        <p class=""><strong>Experience:</strong></p>
+                                        <ul class="list-disc list-inside">
+                                            <li>HR/Intl. Office Management</li>
+                                            <li>Branding/Marketing Expert</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <h2 class="text-darkbgText lg:text-xl text-lg font-bold mt-3">Chief Financial Officer
+                                </h2>
+                                <p class="text-gray-400 text-sm lg:text-md">Valentino Wiyoto</p>
+                            </div>
+                        </div>
+
+                        <div class="group relative w-full sm:w-1/2 p-4" data-aos="fade-up" data-aos-duration="1000"
+                            data-aos-delay="300">
+                            <div
+                                class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300">
+                                <img class="object-cover w-full h-full" src="./src/Images/teams/Ziah.png"
+                                    alt="Card Image">
+                                <div
+                                    class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
+                                    <p class="text-gray-300"><strong>Education: </strong>Undergraduate Degree in
+                                        Psychology
+                                    </p>
+                                    <div class="mt-3 text-gray-300">
+                                        <p class=""><strong>Experience:</strong></p>
+                                        <ul class="list-disc list-inside">
+                                            <li>Industry/Organization Focus</li>
+                                            <li>Skilled Report Compilers</li>
+                                            <li>Financial Statements Creation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <h2 class="text-darkbgText lg:text-xl text-lg font-bold mt-3">Secretary</h2>
+                                <p class="text-gray-400 text-sm lg:text-md">Fauziah Azahra</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Team 2 Section -->
+
+
+
+
+            <!-- Team Developer Section -->
+            <!-- Team Developer Card -->
             <div class="flex flex-col items-center justify-center w-full mt-10 px-4">
                 <h3 class="text-3xl text-darkbgText mb-2">Developer</h3>
-                <p class="text-gray-400 text-center">Our developer team is proficient in HTML, CSS, PHP, JavaScript, and
-                    frameworks
-                    like React.js, Vue.js, and Nuxt.js, delivering innovative and high-quality web solutions.</p>
+                <p class="text-gray-400 text-center">Our developer team Experienced in various development projects,
+                    including building web application, prediction system, and Application.</p>
             </div>
-            <div class="flex flex-col md:flex-row items-center justify-center w-full mt-10">
-                <div class="group relative w-full md:w-1/3 lg:w-1/4 p-4">
-                    <div class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300"
-                        data-aos="fade-up" data-aos-duration="1000" data-aos-delay="">
-                        <img class="object-cover w-full h-full" src="./src/Images/teams/image.png" alt="Card Image">
+            <div class="flex flex-wrap justify-center w-full mt-10">
+                <div class="group relative w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4" data-aos="fade-up"
+                    data-aos-duration="1000">
+                    <div
+                        class="relative overflow-hidden shadow-xl h-72 md:h-80 lg:h-96 hover:scale-105 transition duration-300">
+                        <img class="object-cover w-full h-full" src="./src/Images/teams/_MG_2562.png"
+                            alt="Luis Ferdinand">
                         <div
                             class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
-                            <h2 class="text-darkbgText lg:text-2xl text-xl font-bold ">Luis Ferdinand</h2>
-                            <p class="text-gray-300 lg:text-lg mb-5">Chief Technology Officer</p>
-                            <p class="text-gray-300 lg:text-lg text-justify">I am a freelance web developer skilled in
-                                HTML, CSS, PHP, JavaScript, and frameworks like React.js, Vue.js, and Nuxt.js, with
-                                experience in graphic design and machine learning.
+                            <p class="text-gray-300"><strong>Education: </strong>Undergraduate Degree in
+                                Computer Science
                             </p>
+                            <div class="mt-3 text-gray-300">
+                                <p class=""><strong>Experience:</strong></p>
+                                <ul class="list-disc list-inside">
+                                    <li>Expertise in HTML, CSS, JavaScript</li>
+                                    <li>Intermediate Backend Developer</li>
+                                    <li>4 Finished Web Development Project</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="group relative w-full md:w-1/3 lg:w-1/4 p-4">
-                    <div class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300"
-                        data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                        <img class="object-cover w-full h-full" src="src/Images/teams/Martin.png" alt="Card Image">
-                        <div
-                            class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
-                            <h2 class="text-darkbgText lg:text-2xl text-xl font-bold ">Martin Lay</h2>
-                            <p class="text-gray-300 lg:text-lg mb-5">Backend Lead Developer</p>
-                            <p class="text-gray-300 lg:text-lg text-justify">Experienced with expertise in programming
-                                languages ​​such as HTML, CSS, JavaScript, and PHP. Experience in developing from
-                                personal portfolios to e-commerce platforms</p>
-                        </div>
+                    <div class="text-center mt-3">
+                        <h2 class="text-darkbgText lg:text-xl text-lg font-bold">Chief Technology Officer</h2>
+                        <p class="text-gray-400 text-sm lg:text-md">Luis Ferdinand</p>
                     </div>
                 </div>
-                <div class="group relative w-full md:w-1/3 lg:w-1/4 p-4">
-                    <div class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300"
-                        data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        <img class="object-cover w-full h-full" src="./src/Images/teams/Nikky.jpg" alt="Card Image">
+                <div class="group relative w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4" data-aos="fade-up"
+                    data-aos-duration="1000" data-aos-delay="100">
+                    <div
+                        class="relative overflow-hidden shadow-xl h-72 md:h-80 lg:h-96 hover:scale-105 transition duration-300">
+                        <img class="object-cover w-full h-full" src="src/Images/teams/Martin.png" alt="Martin Lay">
                         <div
                             class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
-                            <h2 class="text-darkbgText lg:text-2xl text-xl font-bold ">Nikky</h2>
-<<<<<<< HEAD
-                            <p class="text-gray-300 lg:text-lg mb-5">Backend Designer</p>
-                            <p class="text-gray-300 lg:text-lg text-justify">As a Computer Science student, I build
-                                websites and projects using HTML, CSS, JavaScript, Python, SQL, and Git. Experienced
-                                with frameworks like Laravel, NuxtJs, Vue.Js, and React.Js.</p>
-=======
-                            <p class="text-gray-300 lg:text-lg mb-5">Backend Developer</p>
-                            <p class="text-gray-300 lg:text-lg text-justify">as a computer science student, I have
-                                interest in about programming languages to build something, especially building website,
-                                or maybe creating project. Expertise in HTML, CSS, JavaScript, Python, SQL, and Git.
-                                Also have experience with some of the frameworks such as Laravel, NuxtJs, Vue.Js, and
-                                React.Js</p>
->>>>>>> b9066212f7332faa7c831a2d75390598867263a9
-                        </div>
-                    </div>
-                </div>
-                <div class="group relative w-full md:w-1/3 lg:w-1/4 p-4">
-                    <div class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300"
-                        data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                        <img class="object-cover w-full h-full" src="src/Images/teams/David.png" alt="Card Image">
-                        <div
-                            class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
-                            <h2 class="text-darkbgText lg:text-2xl text-xl font-bold ">David</h2>
-<<<<<<< HEAD
-                            <p class="text-gray-300 lg:text-lg mb-5">UI/UX Developer</p>
-                            <p class="text-gray-300 lg:text-lg text-justify">Enthusiastic Data Analyst and Web Developer
-                                skilled in Python, SQL, and JavaScript. Expert in data visualization, and creating
-                                dynamic web experiences. Detail-oriented and adept at actionable
-                                insights.
-=======
-                            <p class="text-gray-300 lg:text-lg mb-5">Developer (UI/UX)</p>
-                            <p class="text-gray-300 lg:text-lg text-justify">I'm Enthusiastic and detail-oriented in
-                                Data Analyst and Web Developer with a knack for turning complex data into actionable
-                                insights and crafting seamless web experiences. Proficient in Python, SQL, and
-                                JavaScript, I excel in data visualization, predictive modeling, and building dynamic
-                                websites.
->>>>>>> b9066212f7332faa7c831a2d75390598867263a9
+                            <p class="text-gray-300"><strong>Education: </strong>Undergraduate Degree in
+                                Computer Science
                             </p>
+                            <div class="mt-3 text-gray-300">
+                                <p class=""><strong>Experience:</strong></p>
+                                <ul class="list-disc list-inside">
+                                    <li>Expertise in HTML, CSS, JavaScript, PHP</li>
+                                    <li>Develops: Personal Portfolios to E-commerce Platforms</li>
+                                    <li>Develop Application with Image Recognition system</li>
+                                </ul>
+                            </div>
                         </div>
+                    </div>
+                    <div class="text-center mt-3">
+                        <h2 class="text-darkbgText lg:text-xl text-lg font-bold">Backend Developer Lead</h2>
+                        <p class="text-gray-400 text-sm lg:text-md">Martin Lay</p>
                     </div>
                 </div>
 
-                <div class="group relative w-full md:w-1/3 lg:w-1/4 p-4">
-                    <div class="relative overflow-hidden shadow-xl h-72 md:h-96 hover:scale-105 transition duration-300"
-                        data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                        <img class="object-cover w-full h-full" src="./src/Images/teams/Ravel.jpg" alt="Card Image">
+                <div class="group relative w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4" data-aos="fade-up"
+                    data-aos-duration="1000" data-aos-delay="200">
+                    <div
+                        class="relative overflow-hidden shadow-xl h-72 md:h-80 lg:h-96 hover:scale-105 transition duration-300">
+                        <img class="object-cover w-full h-full" src="./src/Images/teams/Nikky.jpg" alt="Oktavian Nikky">
                         <div
                             class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
-                            <h2 class="text-darkbgText lg:text-2xl text-xl font-bold ">Ravel</h2>
-                            <p class="text-gray-300 lg:text-lg mb-5">Front end </p>
-                            <p class="text-gray-300 lg:text-lg text-justify"></p>
+                            <p class="text-gray-300"><strong>Education: </strong>Undergraduate Degree in
+                                Computer Science
+                            </p>
+                            <div class="mt-3 text-gray-300">
+                                <p class=""><strong>Experience:</strong></p>
+                                <ul class="list-disc list-inside">
+                                    <li>Python, SQL, HTML/CSS/JS</li>
+                                    <li>Bangkit 2023 ML</li>
+                                </ul>
+                            </div>
                         </div>
+                    </div>
+                    <div class="text-center mt-3">
+                        <h2 class="text-darkbgText lg:text-xl text-lg font-bold">Frontend Developer</h2>
+                        <p class="text-gray-400 text-sm lg:text-md">Oktavian Nikky</p>
                     </div>
                 </div>
             </div>
 
-        </div>
+            <!-- UI/UX Team Member Card -->
+            <div class="flex flex-col items-center justify-center w-full mt-10 px-4">
+                <h3 class="text-3xl text-darkbgText mb-2">UI/UX Designer</h3>
+                <p class="text-gray-400 text-center">Our UI/UX team is proficient in uing UI/UX Design Tools like Figma,
+                    Wordspress to
+                    deliver innovative and high-quality User Interface and Experience.</p>
+            </div>
+            <div class="flex flex-wrap justify-center w-full mt-10">
+                <div class="group relative w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4" data-aos="fade-up"
+                    data-aos-duration="1000">
+                    <div
+                        class="relative overflow-hidden shadow-xl h-72 md:h-80 lg:h-96 hover:scale-105 transition duration-300">
+                        <img class="object-cover w-full h-full" src="src/Images/teams/David.png" alt="David">
+                        <div
+                            class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
+                            <p class="text-gray-300"><strong>Education: </strong>Second Year Undergraduate Degree in
+                                Computer Science
+                            </p>
+                            <div class="mt-3 text-gray-300">
+                                <p class=""><strong>Experience:</strong></p>
+                                <ul class="list-disc list-inside">
+                                    <li>Proficient: Figma & Wordspress</li>
+                                    <li>Graphic Designing</li>
+                                    <li>Basic in HTML&CSS</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-3">
+                        <h2 class="text-darkbgText lg:text-xl text-lg font-bold">UI/UX Designer</h2>
+                        <p class="text-gray-400 text-sm lg:text-md">David</p>
+                    </div>
+                </div>
+
+                <div class="group relative w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4" data-aos="fade-up"
+                    data-aos-duration="1000" data-aos-delay="100">
+                    <div
+                        class="relative overflow-hidden shadow-xl h-72 md:h-80 lg:h-96 hover:scale-105 transition duration-300">
+                        <img class="object-cover w-full h-full" src="./src/Images/teams/Ravel.png" alt="Ravel">
+                        <div
+                            class="flex flex-col items-center justify-center absolute top-full left-0 w-full h-full bg-gray-700 bg-opacity-50 backdrop-blur-sm p-4 group-hover:top-0 transition-all duration-1000">
+                            <p class="text-gray-300"><strong>Education: </strong>Second Year Undergraduate Degree in
+                                Computer Science
+                            </p>
+                            <div class="mt-3 text-gray-300">
+                                <p class=""><strong>Experience:</strong></p>
+                                <ul class="list-disc list-inside">
+                                    <li>Proficient: Figma & Wordspress</li>
+                                    <li>Graphic Designing</li>
+                                    <li>Basic in HTML&CSS</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-3">
+                        <h2 class="text-darkbgText lg:text-xl text-lg font-bold">UI/UX Lead</h2>
+                        <p class="text-gray-400 text-sm lg:text-md">João Nitoivar</p>
+                    </div>
+                </div>
+            </div>
+
     </section>
 
     <button id="backToTop"
@@ -464,7 +585,7 @@
                         class="max-w-[250px] mx-4 py-4 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-500">
                         <img src="src/services/Web.svg" alt="">
                     </a>
-                    <h4 class="text-2xl mb-10">App & Web Design</h4>
+                    <h4 class="text-2xl mb-10">UI/UX Design</h4>
                 </div>
                 <div class="flex flex-col" data-aos="slide-up" data-aos-duration="1000" data-aos-delay="300">
                     <a href="#"
@@ -509,14 +630,14 @@
                     <div>
                         <h5 class="text-xl flex items-center text-darkbgText"><i
                                 class="text-base text-gray-400 fa fa-phone mr-2" aria-hidden="true"></i> Phone</h5>
-                        <p class="text-gray-400">081122334455</p>
+                        <p class="text-gray-400">+62 852-8268-3529</p>
                     </div>
                 </div>
             </div>
             <hr class="w-full md:hidden opacity-20">
             <div class="md:w-1/2 lg:w-1/2 md:ml-10 p-8 rounded-lg" data-aos="fade-up" data-aos-duration="1000"
                 data-aos-once="true">
-                <h2 class="text-4xl text-center mb-10 text-darkbgText">Chat Us</h2>
+                <h2 class="text-4xl text-center mb-10 text-darkbgText">Message Form</h2>
                 <form action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="af4a2585-2bcc-4dbf-a4e0-7207540fcbc9">
                     <div class="mb-6">
@@ -551,7 +672,7 @@
     <!-- Footer Section -->
     <footer class="bg-darkbgText text-white py-8">
         <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-wrap justify-between items-center">
+            <div class="flex flex-wrap justify-center items-center">
                 <div class="w-full md:w-1/3 mb-4 md:mb-0">
                     <h5 class="text-lg font-bold mb-2">About Us</h5>
                     <p class="text-gray-400">We are a team of passionate professionals dedicated to providing top-notch
@@ -573,7 +694,7 @@
                     <h5 class="text-lg font-bold mb-2">Contact Us</h5>
                     <p class="text-gray-400">Jakarta Barat, Indonesia.</p>
                     <p class="text-gray-400">Email: Inveastgroup@email.com</p>
-                    <p class="text-gray-400">Phone: (123) 456-7890</p>
+                    <p class="text-gray-400">Phone: +62 852-8268-3529</p>
                     <div class="flex space-x-4 mt-4">
                         <a href="https://www.facebook.com/" target="_blank" class="text-gray-400 hover:text-sky-400">
                             <i class="fab fa-facebook-f"></i>
@@ -594,7 +715,7 @@
                 </div>
             </div>
             <div class="text-center text-gray-500 mt-8">
-                &copy; Inveast, Innovation for the East
+                &copy; Innovation for the East
             </div>
         </div>
     </footer>
