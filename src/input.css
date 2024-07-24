@@ -7,5 +7,9 @@
 }
 
 .bg-contact {
-    background-image: url('./Images/Background.png');
+    background:
+        linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)),
+        url('./Images/back.png');
+    background-size: cover;
+    background-position: center;
 }
