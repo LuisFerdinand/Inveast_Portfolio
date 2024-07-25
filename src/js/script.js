@@ -56,8 +56,8 @@ backToTopButton.addEventListener("click", () => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("hero").scrollIntoView({ behavior: 'smooth' });
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//     document.getElementById("hero").scrollIntoView({ behavior: 'smooth' });
+// });
 
 
